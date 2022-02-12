@@ -1,0 +1,21 @@
+
+.input{
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+    border-color: inherit;
+}
+.small{
+    height: 2rem;
+    font-size: .875rem;
+}
+.medium{
+    height: 2.5rem;
+    font-size: 1rem;
+}
+.large{
+    height: 3rem;
+    font-size: 1.25rem;
+}
