@@ -4,8 +4,10 @@ import Button from "./index";
 export default {
   title: "Form/Button",
   component: Button,
-  args: {
-    children: "Button", // Args at component level remember:Args at story level overwrite on component level
+  argTypes: {
+    variant: { control: "text" },
+    children: { control: "text" },
+    onClick: { action: "clicked" },
   },
 };
 
@@ -15,26 +17,18 @@ export default {
 // export const Success = () => <Button variant="success">Success</Button>;
 // export const Danger = () => <Button variant="danger">Danger</Button>;
 
-//Used Approach
 const Template = (args) => <Button {...args} />;
 
-export const PrimaryA = Template.bind({});
+export const Primary = Template.bind({});
 
-PrimaryA.args = {
-  variant: "primary", // args at story level
-  children: "primary args",
+Primary.args = {
+  variant: "primary",
+  children: "Button",
 };
 
-export const SecondaryA = Template.bind({});
+export const Secondary = Template.bind({});
 
-SecondaryA.args = {
+Secondary.args = {
   variant: "secondary",
-  children: "secondary args",
-};
-
-export const LongPrimaryArgs = Template.bind({});
-
-LongPrimaryArgs.args = {
-  ...PrimaryA.args,
-  children: "Long Primary Argss",
+  children: "Secondary",
 };
